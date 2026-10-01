@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>tb3_maze_navigation</name>
+  <version>0.1.0</version>
+  <description>
+    Wall-Following und Pledge-Algorithmus für den TurtleBot3 Burger.
+    Labyrinthlösung ohne Karte (reaktiv, LiDAR-basiert).
+  </description>
+
+  <maintainer email="deine@email.de">Dein Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build-Tool -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- ROS 2 Core -->
+  <depend>rclpy</depend>
+
+  <!-- Nachrichten-Typen die wir verwenden -->
+  <depend>sensor_msgs</depend>      <!-- LaserScan (/scan) -->
+  <depend>geometry_msgs</depend>    <!-- Twist (/cmd_vel) -->
+  <depend>nav_msgs</depend>         <!-- Odometry (/odom) – für Pledge -->
+
+  <!-- Test-Dependencies (optional) -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+</package>
